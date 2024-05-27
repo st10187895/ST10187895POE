@@ -12,6 +12,9 @@
     nav {
         -webkit-text-fill-color: white;
     }
+    .user-account{
+        float:right;
+    }
 </style>
 <body>
     <header>
@@ -40,8 +43,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
 
                         </li>
-                        
-                        
+                        <li class="user-account">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignUp">Account</a>
+
+                        </li>
+                        <li class="cart">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cart">Cart</a>
+
+                        </li>
+                        <li class="cart">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ProductsAdmin">Products Admin</a>
+
+                        </li>
                     </ul>
                 </div>
             </div>

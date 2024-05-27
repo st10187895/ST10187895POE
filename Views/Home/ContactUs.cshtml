@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ST10187895POE.Models.tblContactUsModel
+@{
     ViewData["Title"] = "Contact Us";
 }
 <style> 
@@ -10,7 +11,7 @@
         background-color: #000080;
     }
 
-    .mk-contact-form {
+    .ContactUs-form {
         position:center;
         left:50%;
     }
@@ -20,47 +21,26 @@
 <h1> Contact Us</h1>
 <br /><br />
 
-<div class="mk-contact-form">
+<div class="ContactUs-form">
     <p>Should you have an enquiry, please fill out the form below and we will be sure to get back to you!</p>
-    <form id="mk-contact-form-5" class="mk-contact-form clearfix" method="post" novalidate="novalidate" enctype="multipart/form-data">
+    <form asp-controller="ContactUs" asp-action="ContactUs"  method="post">
 
-        <div class="mk-form-row">
+        
+                <input placeholder="First Name*" type="text" required="required" name="firstName" class="text-input s_txt-input" tabindex="30">
+            
 
-            <div class="mk-form-half s_form-all">
-                <input placeholder="First Name*" type="text" required="required" name="name" class="text-input s_txt-input" tabindex="30">
-            </div>
 
-            <div class="mk-form-half s_form-all">
-                <input placeholder="Last Name*" type="text" required="required" name="last_name" class="text-input s_txt-input" tabindex="31">
-            </div>
+                <input placeholder="Last Name*" type="text" required="required" name="lastName" class="text-input s_txt-input" tabindex="31">
 
-        </div>
 
-        <div class="mk-form-row">
 
-            <div class="mk-form-third s_form-all">
-                <input placeholder="Email*" type="email" data-type="email" required="required" name="email" class="text-input s_txt-input" tabindex="32">
-            </div>
+                <input placeholder="Email*" type="text" data-type="email" required="required" name="email" class="text-input s_txt-input" tabindex="32">
 
-            <div class="mk-form-third s_form-all">
-                <input placeholder="Phone Number" type="text" name="phone" class="text-input s_txt-input two-third" value="" tabindex="34">
-            </div>
+                <input placeholder="Phone Number" type="text" name="phoneNum" class="text-input s_txt-input two-third" value="" tabindex="34">
 
-        </div>
+                <input placeholder="Message" type="text" name="message" class="mk-textarea s_txt-input" tabindex="35">
 
-        <div class="mk-form-row">
-            <div class="mk-form-full s_form-all">
-                <textarea required="required" placeholder="Message" name="content" class="mk-textarea s_txt-input" tabindex="35"></textarea>
-            </div>
-        </div>
-
-        <div class="mk-form-row" >
-            <button class="mk-progress-button mk-button mk-button--dimension-flat mk-button--size-medium text-color-light contact-submit contact-form-button _ font-weight-b" data-style="move-up" tabindex="36">
-                <span class="mk-progress-button-content">
-                    Submit
-                </span>
-                </button>
-        </div>
+                <button type="submit">Submit</button>
     </form>
     <br /><br />
 

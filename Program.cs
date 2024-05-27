@@ -9,6 +9,13 @@ namespace ST10187895POE
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(Options =>
+            {
+                Options.IdleTimeout = TimeSpan.FromMinutes(120);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -22,6 +29,8 @@ namespace ST10187895POE
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -32,5 +41,7 @@ namespace ST10187895POE
 
             app.Run();
         }
+
+       
     }
 }

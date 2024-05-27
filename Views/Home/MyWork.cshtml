@@ -1,11 +1,11 @@
-﻿
+﻿@model ST10187895POE.Models.Products
 
 @{
     ViewData["Title"] = "My Work";
 
 }
 <style>
-    body {
+    /* body {
         background-color: #F5f5dc;
     }
 
@@ -53,45 +53,128 @@
         max-width: 200px;
         height: 350px;
         float: right;
+    } */
+
+    .productsGoHere
+    {
+        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 25px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;
     }
+    .Products-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .product-display 
+    {
+        width: 250px;
+        height: 400px;
+        padding: 0.8em 0.8em 0 0.8em;
+        background: #ffffff;
+        display: flex;
+        position: relative;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        justify-content: flex-start;
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        margin: 0.5em;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+    
+
+    }
+
+    .product-display:hover{
+        box-shadow: 0.5px rgba(0,0,0,0.3);
+    }
+    .product-img img{
+        max-height: 60%;
+        max-width: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    
 
     
 
 </style>
 
-<h1> My Work</h1>
-<br/><br/>
-    <div class=" product1">
-<img src="https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/c/r/crdhoj800053234-1_3.jpg"  />
-<p class="pictureTitle">Indian Tea </p>
-<p class="pictureInfo">
-        This handcrafted tea set was made by Mr Khumalo in 2008 during his time in India, most of which was spent with
-        indian metal workers. As india is a former british colony, Mr Khumalo wanted to create an artwork that combined india's past with its future. Mr Khumalo chose to do this by
-        making a tea set from brass as this pays homage to one of the Brits' favourite delicacy, whilst commending the contribution the metal industry has made to the indian economy and its people.
-    </p>
 
-    <P1>R 12 499.00</P1>
-    </div>
+<section class="productsGoHere">
+    <div class = "Products-container">
+        @foreach(var productName in Views_Home_MyWork)
+        {
+            
+        }
+        <div class="product-display">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/220" />
+            </div>
+            <div class="product-name">
+                A product
+            </div>
+            <div class="product-price">
+                R 2,100
+            </div>
+        </div>
 
-    <div class="product2">
-        <img src="https://res.cloudinary.com/rmwdam/image/upload/dpr_auto,f_auto,q_auto/v1/content/Handcrafted%20leather%20goods/ADVENTURE-PACK-HERO" />
-        <p class="pictureTitle">Leather essentials </p>
-        <p class="pictureInfo">
-            A handcrafted set of leather essentials made by Mr Khumalo. This set of handcrafted leather goods consists of a 15 inch laptop pouch, a traditional flip wallet,
-            wireless earphone case, key-holder, luggage tag, phone holder, airtag holder and a card holder.This essential set will ensure that your daily essentials are kept secure 
-            and that you are kept stylish
-        </p>
-        <p1>R 14 900.00</p1>
-    </div>
+        <div class="product-display">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/220" />
+            </div>
+            <div class="product-name">
+                A product
+            </div>
+            <div class="product-price">
+                R 2,100
+            </div>
+        </div>
 
-    <div class="product3">
-    
-         <img src="https://images1.novica.net/pictures/10/p129458_2_400.jpg" 
-         />
-    <p class="pictureTitle"> Hunger </p>
-    <p class="pictureInfo">
-        This wooden decor piece was made by Mr Khumalo during his time in central africa, a reigon with over 1,5 million km² of forestry. During this time Mr Khumalo
-        was also part of various community outreach programmes where he witnessed the effects of poverty at the site of several children suffering from malnutrition.
-    </p>
-    <p1> R 7 599.00 </p1>
+        <div class="product-display">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/220" />
+            </div>
+            <div class="product-name">
+                A product
+            </div>
+            <div class="product-price">
+                R 2,100
+            </div>
+        </div>
+
+        <div class="product-display">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/220" />
+            </div>
+            <div class="product-name">
+                A product
+            </div>
+            <div class="product-price">
+                R 2,100
+            </div>
+        </div>
+
+        <div class="product-display">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/220" />
+            </div>
+            <div class="product-name">
+                A product
+            </div>
+            <div class="product-price">
+                R 2,100
+            </div>
+        </div>
     </div>
+</section>
+

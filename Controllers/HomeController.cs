@@ -36,6 +36,18 @@ namespace ST10187895POE.Controllers
         {
             return View();
         }
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        public IActionResult Cart()
+        {
+            return View();
+        }
+        public IActionResult ProductsAdmin()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
