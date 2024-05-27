@@ -4,7 +4,7 @@ namespace ST10187895POE.Models
 {
     public class Usertbl
     {
-        public static string con_string = "Server=tcp:mikes-sql-23.database.windows.net,1433;Initial Catalog=KhumaloCraft;Persist Security Info=False;User ID=st10187895;Password=AbsisLowers82@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        public static string con_string = "Initial Catalog=KhumaloCraft;Persist Security Info=False;User ID=\\;Password=\\;;Connection Timeout=30;";
 
         public static SqlConnection con = new SqlConnection(con_string);
         public string name {  get; set; }  
