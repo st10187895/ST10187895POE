@@ -5,7 +5,7 @@ namespace ST10187895POE.Models
 {
     public class tblContactUsModel
     {
-        public static string con_string = "ConnectionString.database.windows.net,1433;Initial Catalog=KhumaloCraft;Persist Security ;User ID=\\;Password=\\;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate;Connection Timeout=30;";
+        public static string con_string = "Initial Catalog=KhumaloCraft;Persist Security Info=False;User ID=\\;Password=\\;;Connection Timeout=30;";
 
         public static SqlConnection con = new SqlConnection(con_string);
 
