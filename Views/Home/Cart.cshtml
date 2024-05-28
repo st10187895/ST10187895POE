@@ -1,6 +1,9 @@
 ﻿
 @{
     ViewData["Title"] = "Cart";
+    var userID = ViewData["userID"];
+    var CartItems = ViewData["YourCart"] as List<ST10187895POE.Models.Cart>;
+
 }
 <style>
     body {
@@ -85,10 +88,10 @@
             <img src="https://via.placeholder.com/80" alt="Product Image">
             <div class="product-details">
                 <h3>A product</h3>
-                <p>Colour: White<br>Size: 6</p>
+                <p>Catergory<br>A category</p>
             </div>
             <div class="product-price">
-                R 2 799,00
+                R 2 100,00
             </div>
             <div class="product-quantity">
                 <input type="number" value="1" min="1">
@@ -96,9 +99,7 @@
             <div class="product-subtotal">
                 R 2 799,00
             </div>
-            <div>
-                <a href="#" style="color: #e67e22;">Remove</a>
-            </div>
+            
         </div>
     </div>
 

@@ -26,21 +26,29 @@
     <form asp-controller="ContactUs" asp-action="ContactUs"  method="post">
 
         
-                <input placeholder="First Name*" type="text" required="required" name="firstName" class="text-input s_txt-input" tabindex="30">
-            
+                <
+        <div class="flex">
+            <label>
+                <input placeholder="First Name*" type="text" required="required" name="firstName" class="input">
+            </label>
 
+            <label>
+                <input placeholder="Last Name*" type="text" required="required" name="lastName" class="input">
+            </label>
+        </div>
 
-                <input placeholder="Last Name*" type="text" required="required" name="lastName" class="text-input s_txt-input" tabindex="31">
+        <label>
+            <input placeholder="Email*" type="text" required="required" name="email" class="input">
+        </label>
 
+        <label>
+            <input placeholder="Phone Number*" type="text" required="required" name="phoneNum" class="input">
+        </label>
 
-
-                <input placeholder="Email*" type="text" data-type="email" required="required" name="email" class="text-input s_txt-input" tabindex="32">
-
-                <input placeholder="Phone Number" type="text" name="phoneNum" class="text-input s_txt-input two-third" value="" tabindex="34">
-
-                <input placeholder="Message" type="text" name="message" class="mk-textarea s_txt-input" tabindex="35">
-
-                <button type="submit">Submit</button>
+        <label>
+            <input placeholder="Message" type="text" required="required" name="message" class="input">
+        </label>
+        <button type="submit">Submit</button>
     </form>
     <br /><br />
 

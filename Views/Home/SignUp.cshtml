@@ -5,7 +5,9 @@
 }
 
 <style>
-
+    body {
+        background-color: #F5f5dc;
+    }
 .form {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,7 @@
 
 .title {
   font-size: 28px;
-  color: royalblue;
+        color: #1899D6;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -113,7 +115,7 @@
 .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+        background-color: #1899D6;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
@@ -125,18 +127,25 @@
   background-color: rgb(56, 90, 194);
 }
 .form-container{
+    justify-content:center;
     display: none;
 }
 .form-container.active {
-    display: block;
+    display: flex;
+}
+.SignUp-toggle{
+    justify-content:center
+}
+.SignUp-toggle.active{
+    display:flex;
 }
 </style>
 <body>
-<div>
-    <span>
+<div class="SignUp-toggle">
+    
     <button onclick="showForm('SignUpForm')">SignUp</button>
     <button onclick="showForm('LoginForm')">Login</button>
-    </span>
+    
 </div>
 
 <div id="SignUpForm" class="form-container active">
@@ -164,10 +173,7 @@
         <input placeholder="" type="text" required="required" name="password" class="input">
         <span>Password</span>
     </label>
-    @* <label>
-        <input required="" placeholder="" type="password" class="input">
-        <span>Confirm password</span>
-    </label> *@
+    
     <button class="submit">Sign Up</button>
             <div class="container">
                 <span>Already Have an account? 
